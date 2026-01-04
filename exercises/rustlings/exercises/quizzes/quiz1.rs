@@ -16,6 +16,16 @@ fn main() {
     // You can optionally experiment here.
 }
 
+fn calculate_price_of_apples(amount: u32) -> u32 {
+    let apple_price = 2;
+    let apple_price_discounted = 1;
+
+    match amount {
+        n if n > 40 => return amount * apple_price_discounted,
+        _ => return amount * apple_price,
+    }
+}
+
 // Don't change the tests!
 #[cfg(test)]
 mod tests {
