@@ -1,7 +1,7 @@
 use std::process::Command;
 
 fn main() {
-	let output = Command::new("ls")
+    let output = Command::new("ls")
 		.arg("-ls")
 		.output()
 		.expect("Failed to execute command");
@@ -10,5 +10,4 @@ fn main() {
 
 	println!("{}", stdout);
 	println!("{}", output.status.success());
-
 }
